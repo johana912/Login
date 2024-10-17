@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro e Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 300px;
+            margin: 100px auto;
+            text-align: center;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container" id="register-section">
+        <h2>Registro</h2>
+        <input type="text" id="name" placeholder="Nombre">
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="register()">Registrar</button>
+        <p id="register-error" class="error"></p>
+    </div>
+
+    <div class="form-container" id="login-section" style="display: none;">
+        <h2>Inicio de Sesión</h2>
+        <input type="email" id="login-email" placeholder="Correo electrónico">
+        <input type="password" id="login-password" placeholder="Contraseña">
+        <button onclick="login()">Iniciar Sesión</button>
+        <p id="login-error" class="error"></p>
+    </div>
+
+    <div class="form-container" id="home-section" style="display: none;">
+        <h2>Bienvenido, <span id="user-name"></span></h2>
+        <button onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
